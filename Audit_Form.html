@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PropSimple_Audit_Form</title>
+    <style>
+    h1 {text-align: center;
+    }
+    body {
+      background-color: white;
+    }
+    table, th, td, textarea {
+      border:1px solid black;
+    }
+    table th {
+      background-color:#cccccc;
+    }
+    textarea {
+      resize: none;
+    }
+    .container {
+      position: relative;
+    }
+    .topright {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 18px;
+    }
+    </style>
+</head>
+<body>
+<header>
+  <img width="300" height="81" src="img/PropSimpleLogo-11.png" alt="PropSimple">
+  <div class="container">
+    <div class="topright">
+      <label for="ZoneManager">Area Manager</label><input type="text" id="ZoneManager" >
+    </div>
+    <div>
+      <label for="start">Date:</label>
+      <input type="date" name="trip-start"
+         value="2022-01-01"
+         min="2022-01-01" max="2022-12-31"><br><br>
+    </div>
+  </div>
+  <h1>    Quality Check Audit</h1>
+</header>
+  <label for="propertyName">Building Address/Name: </label>
+    <input type="text" id="propertyName">
+  <label for="propertyArea">Suite/Area: </label>
+    <input type="text" id="PropertyArea">
+  <label for="cleanerName">Cleaner Name: </label>
+    <input type="text" id="CleanerName" >
+<table style="width:100%" >
+  <tr>
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>Lobby</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dust</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" size="20"/>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Windows</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Front Desk</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+  <textarea id="comments" name="comments" rows="5" cols="110" width="70%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>2</th>
+    <th>Bathroom</th>
+    <th> </th>
+    <th>15%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dispensers</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Toilets</td>
+    <td> </td>
+    <td>3.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Sinks</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>3.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Mirrors</td>
+    <td> </td>
+    <td>0.5%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Stocking</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Walls</td>
+    <td> </td>
+    <td>0.5%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Locker/Shower</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Black Light Check</td>
+    <td> </td>
+    <td>0.5%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+  <textarea id="comments" name="comments" rows="5" cols="110" width="70%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>3</th>
+    <th>Breakroom</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dispensers</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Appliances</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Sinks</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Walls</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Stocking</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash can</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Counter/Cabinet</td>
+    <td> </td>
+    <td>1.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+<textarea id="comments" name="comments" rows="5" cols="110" width="70%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>4</th>
+    <th>Exam Room</th>
+    <th> </th>
+    <th>25%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>3.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dispensers</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Sinks</td>
+    <td> </td>
+    <td>3.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>4.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Walls</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash can</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Stocking</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Mirrors</td>
+    <td> </td>
+    <td>1.5%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Counter/Cabinet</td>
+    <td> </td>
+    <td>3.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Black Light Check</td>
+    <td> </td>
+    <td>0.5%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+<textarea id="comments" name="comments" rows="5" cols="110" width="70%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>5</th>
+    <th>Office Space</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash Can</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Walls / Doors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+  </tr>
+</table>
+<label for="comments">Comments</label>
+<textarea id="comments" name="comments" rows="5" cols="110" width="70%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>6</th>
+    <th>Entry Ways</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Windows</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash Can</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+  <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" rows="5" cols="80" width="100%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>7</th>
+    <th>Commons</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Dusting</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Windows</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Furniture</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash Can</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+<textarea id="comments" name="comments" rows="5" cols="80" width="100%">
+  </textarea>
+<table style="width:100%" >
+  <tr >
+    <th>Area</th>
+    <th>Area Description</th>
+    <th>Item Description</th>
+    <th>Total Area %</th>
+    <th>Item %</th>
+    <th>Missed %</th>
+  </tr>
+  <tr>
+    <th>8</th>
+    <th>Janitor CLoset</th>
+    <th> </th>
+    <th>10%</th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Organization</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Floors</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Supplies</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Mop Sink</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2"> </th>
+    <td>Trash Can</td>
+    <td> </td>
+    <td>2.0%</td>
+    <td style="100%">
+      <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </td>
+  </tr>
+</table>
+<label for="comments">Comments</label>
+<textarea id="comments" name="comments" rows="5" cols="80" width="100%">
+  </textarea>
+</body>
+</html>
